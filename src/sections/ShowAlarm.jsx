@@ -1,8 +1,9 @@
 import AlarmComponent from '../components/AlarmComponent';
+import '../sections.css/ShowAlarm.css';
 
 function ShowAlarm() {
   return (
-    <div>
+    <div className="Alarm-Body">
       ShowAlarm
       <AlarmComponent />
     </div>
