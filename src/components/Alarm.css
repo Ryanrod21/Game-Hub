@@ -1,0 +1,27 @@
+.Timer {
+  font-size: 39px;
+}
+
+@keyframes flash {
+  0% {
+    background-color: red;
+    color: white;
+  }
+  50% {
+    background-color: white;
+    color: red;
+  }
+  100% {
+    background-color: red;
+    color: white;
+  }
+}
+
+.last-minute {
+  animation: flash 1s infinite;
+}
+
+.QuickBtn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

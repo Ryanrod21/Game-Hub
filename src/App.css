@@ -1,8 +1,12 @@
 #root {
-  max-width: 1280px;
+  width: 1440px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+}
+
+body {
+  transition: background-color 0.5s ease;
 }
 
 .logo {
@@ -39,4 +43,26 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.Nav {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.SideHero {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.SideHero h3:hover {
+  transition: all 1s ease-in-out;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.MainHero {
+  display: flex;
+  justify-content: space-between;
 }

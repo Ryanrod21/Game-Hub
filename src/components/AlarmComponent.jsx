@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
-
-function AlarmComponent() {
+import { useEffect, useState } from 'react';
+import Confetti from 'react-confetti';
+import './Alarm.css';
+function Alarm() {
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [isRunning, setIsRunning] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
     let timer;
@@ -17,8 +19,12 @@ function AlarmComponent() {
         }
       }, 1000);
     } else if (isRunning && minutes === 0 && seconds === 0) {
-      alert("⏰ Time's up!");
+      setShowConfetti(true);
       setIsRunning(false);
+
+      setTimeout(() => {
+        setShowConfetti(false);
+      }, 9000);
     }
 
     return () => clearInterval(timer);
@@ -30,47 +36,173 @@ function AlarmComponent() {
     }
   };
 
+  const pauseTimer = () => {
+    if (minutes > 0 || seconds > 0) {
+      setIsRunning(false);
+    }
+  };
+
   const resetTimer = () => {
     setIsRunning(false);
     setMinutes(0);
     setSeconds(0);
+    setShowConfetti(false);
   };
 
+  const addTimer = (minute) => {
+    setMinutes((prevTime) => prevTime + minute);
+  };
+
+  const addSeconds = (second) => {
+    setSeconds((prevSeconds) => {
+      const totalSeconds = prevSeconds + second;
+      const newMinutes = Math.floor(totalSeconds / 60); // Convert to minutes
+      const newSeconds = totalSeconds % 60; // Get the remaining seconds
+
+      // Update minutes and seconds in one go
+      setMinutes((prevMinutes) => prevMinutes + newMinutes); // Add minutes correctly
+      return newSeconds; // Update seconds correctly
+    });
+  };
+
+  const timerClass =
+    isRunning && minutes === 0 && seconds <= 60 ? 'last-minute' : '';
+
   return (
-    <div className="flex flex-col items-center p-4">
-      <h1 className="text-xl font-bold">React Timer Alarm</h1>
+    <div>
+      {showConfetti && (
+        <Confetti width={window.innerWidth} height={window.innerHeight} />
+      )}
+
+      {isRunning && (
+        <p className={`Timer ${timerClass}`}>
+          Time Left: {minutes.toString().padStart(2, '0')}:
+          {seconds.toString().padStart(2, '0')}
+        </p>
+      )}
+
+      {!isRunning && (
+        <p>
+          Set a Timer to keep track on how long <br></br>you are playing or to
+          keep track of a speedrun....
+        </p>
+      )}
 
       {!isRunning && (
         <input
           type="number"
-          placeholder="Enter minutes"
+          placeholder="enter"
           onChange={(e) => setMinutes(parseInt(e.target.value) || 0)}
-          className="p-2 border rounded mt-2"
         />
       )}
 
-      <p className="text-lg mt-2">
-        Time Left: {minutes.toString().padStart(2, '0')}:
-        {seconds.toString().padStart(2, '0')}
-      </p>
+      <div className="QuickBtn">
+        {isRunning && (
+          <button onClick={() => addSeconds(30)}>+30 Seconds</button>
+        )}
+
+        {isRunning && <button onClick={() => addTimer(2)}>+2 Minutes</button>}
+        {isRunning && <button onClick={() => addTimer(10)}>+10 Minutes</button>}
+        {isRunning && <button onClick={() => addTimer(25)}>+25 Minutes</button>}
+      </div>
+
+      {!isRunning && <h3>Quick Timer</h3>}
+
+      <div className="QuickBtn">
+        {!isRunning && (
+          <button
+            onClick={() => {
+              setMinutes(0);
+              setSeconds(1);
+              setIsRunning(true);
+            }}
+          >
+            Test Confetti
+          </button>
+        )}
+
+        {!isRunning && (
+          <button
+            onClick={() => {
+              setMinutes(1);
+              setSeconds(0);
+              setIsRunning(true);
+            }}
+          >
+            1 Minutes
+          </button>
+        )}
+
+        {!isRunning && (
+          <button
+            onClick={() => {
+              setMinutes(5);
+              setSeconds(0);
+              setIsRunning(true);
+            }}
+          >
+            5 Minutes
+          </button>
+        )}
+
+        {!isRunning && (
+          <button
+            onClick={() => {
+              setMinutes(10);
+              setSeconds(0);
+              setIsRunning(true);
+            }}
+          >
+            10 Minutes
+          </button>
+        )}
+
+        {!isRunning && (
+          <button
+            onClick={() => {
+              setMinutes(25);
+              setSeconds(0);
+              setIsRunning(true);
+            }}
+          >
+            25 Minutes
+          </button>
+        )}
+
+        {!isRunning && (
+          <button
+            onClick={() => {
+              setMinutes(30);
+              setSeconds(0);
+              setIsRunning(true);
+            }}
+          >
+            30 Minutes
+          </button>
+        )}
+
+        {!isRunning && (
+          <button
+            onClick={() => {
+              setMinutes(60);
+              setSeconds(0);
+              setIsRunning(true);
+            }}
+          >
+            1 Hour
+          </button>
+        )}
+      </div>
 
       {!isRunning ? (
-        <button
-          onClick={startTimer}
-          className="mt-2 p-2 bg-blue-500 text-white rounded"
-        >
-          Start Timer
-        </button>
+        <button onClick={startTimer}>start timer</button>
       ) : (
-        <button
-          onClick={resetTimer}
-          className="mt-2 p-2 bg-red-500 text-white rounded"
-        >
-          Reset Timer
-        </button>
+        <button onClick={resetTimer}>reset</button>
       )}
+
+      {isRunning && <button onClick={pauseTimer}> pause </button>}
     </div>
   );
 }
 
-export default AlarmComponent;
+export default Alarm;
