@@ -54,6 +54,8 @@ body {
   display: flex;
   flex-direction: column;
   padding: 8px;
+  width: 20%;
+  text-align: start;
 }
 
 .SideHero h3:hover {
@@ -65,4 +67,5 @@ body {
 .MainHero {
   display: flex;
   justify-content: space-between;
+  
 }

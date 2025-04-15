@@ -46,8 +46,8 @@ function App() {
       <NavBar />
       <div className="MainHero">
         <SideHero />
-        <ShowAlarm />
         <ShowMusic />
+        <ShowAlarm />
       </div>
       <div>
         <CreateList onCreate={addList} />

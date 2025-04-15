@@ -90,6 +90,7 @@ function Alarm() {
 
       {!isRunning && (
         <input
+          className='inputNumber'
           type="number"
           placeholder="enter"
           onChange={(e) => setMinutes(parseInt(e.target.value) || 0)}
