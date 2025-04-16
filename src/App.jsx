@@ -13,10 +13,10 @@ import ItemList from './sections/ItemList';
 function App() {
   const [list, setList] = useState([]);
 
-  const onEditList = (id, newItem, newQuantity) => {
+  const onEditList = (id, newItem) => {
     const updateItem = list.map((edit) => {
       if (edit.id === id) {
-        return { ...edit, item: newItem, quantity: newQuantity };
+        return { ...edit, item: newItem };
       }
       return edit;
     });
@@ -24,14 +24,13 @@ function App() {
     setList(updateItem);
   };
 
-  const addList = ({ item, quantity }) => {
+  const addList = ({ item }) => {
     const updateItem = [
       ...list,
-      { id: Math.round(Math.random() * 9999), item, quantity },
+      { id: Math.round(Math.random() * 9999), item },
     ];
 
     setList(updateItem);
-    console.log(list);
   };
 
   const handleRemove = (id) => {

@@ -11,7 +11,6 @@ function CreateList({ onCreate }) {
     }
     onCreate({ item: itemText.trim() });
     setItem('');
-    setQuantity(1);
   };
 
   const handleChange = (e) => {
