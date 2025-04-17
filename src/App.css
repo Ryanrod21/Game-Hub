@@ -98,6 +98,7 @@ body {
   height: 30px;
   object-fit: cover;
   border-radius: 50%;
+  filter: grayscale(100%)
 }
 
 .FriendsListCard{
@@ -192,4 +193,12 @@ body {
 .OfflineCardWrapper:hover .Profile-popupOffline{
   visibility: visible;
   opacity: 1;
+}
+
+.addBtn{
+  font-size: 13px;
+}
+
+.FriendsPanel{
+  display: flex;
 }
