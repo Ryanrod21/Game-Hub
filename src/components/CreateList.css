@@ -1,6 +1,8 @@
 .createListCard {
   background-color: aqua;
   text-align: center;
+  border-radius: 10px;
+  width: 80%;
 }
 
 .createForm {

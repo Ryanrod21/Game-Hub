@@ -35,7 +35,7 @@ function ListCard({ list, onRemove, onEditList }) {
     <div className="allCard">
       <div className="cardList">
         {content}
-        <div>
+        <div className='EditDelete'>
           <button onClick={handleEditClick}> Edit </button>
           <button onClick={handleDeleteClick}>Delete</button>
         </div>

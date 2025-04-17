@@ -101,8 +101,6 @@ function Alarm() {
         {isRunning && (
           <button onClick={() => addSeconds(30)}>+30 Seconds</button>
         )}
-
-        {isRunning && <button onClick={() => addTimer(2)}>+2 Minutes</button>}
         {isRunning && <button onClick={() => addTimer(10)}>+10 Minutes</button>}
         {isRunning && <button onClick={() => addTimer(25)}>+25 Minutes</button>}
       </div>
@@ -119,18 +117,6 @@ function Alarm() {
             }}
           >
             Test Confetti
-          </button>
-        )}
-
-        {!isRunning && (
-          <button
-            onClick={() => {
-              setMinutes(1);
-              setSeconds(0);
-              setIsRunning(true);
-            }}
-          >
-            1 Minutes
           </button>
         )}
 

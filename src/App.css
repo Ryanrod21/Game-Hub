@@ -59,9 +59,7 @@ body {
   text-align: start;
   background-color: #08d4f8a8;
   border-radius: 10px;
-  backdrop-filter: blur(10px); /* apply blur */
-  -webkit-backdrop-filter: blur(10px); /* for Safari */
-  background-color: rgba(255, 255, 255, 0.2); /* optional frosted glass effect */
+
   border: 1px solid black;
 }
 
@@ -93,7 +91,13 @@ body {
   height: 30px;
   object-fit: cover;
   border-radius: 50%;
-  
+}
+
+.ProfileImgOffline{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .FriendsListCard{
@@ -107,12 +111,36 @@ body {
   align-items: center;
   gap: 5px;
   cursor: pointer;
+}
+
+.FriendsOfflineCard{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
 
 }
 
 .FriendsCardWrapper{
   position: relative;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.OfflineCardWrapper{
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.ProfileHover{
+  font-size: 12px;
+}
+
+.ProfileHoverOffline{
+  font-size: 12px;
 }
 
 .Profile-popup{
@@ -130,6 +158,25 @@ body {
   z-index: 9999;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
+  transform: translateX(0);
+}
+
+.Profile-popupOffline{
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 125%; /* position above the text */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  transform: translateX(0);
 }
 
 .Profile-popup li {
@@ -138,6 +185,11 @@ body {
 }
 
 .FriendsCardWrapper:hover .Profile-popup{
+  visibility: visible;
+  opacity: 1;
+}
+
+.OfflineCardWrapper:hover .Profile-popupOffline{
   visibility: visible;
   opacity: 1;
 }

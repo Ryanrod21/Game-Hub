@@ -11,18 +11,40 @@ const ProfileData = [
             {title: 'Halo 3', hoursPlayed: '856 Hours'},
             {title: 'CoD', hoursPlayed: '492'}
         ],
+        status: 'online',
     }, 
     {
         name: 'User 2',
         img: Lion,
         id: 2,
         description: 'This is user 2 testing',
+        status: 'offline',
+        offline: 'User has been offline for 9 hours'
     },
     {
         name: 'User 3',
         img: Lion,
         id: 3,
         description: 'This is user 3 testing',
+    },
+    {
+        name: 'User 4',
+        img: Lion,
+        id: 3,
+        description: 'This is user 3 testing',
+    },
+    {
+        name: 'User 5',
+        img: Lion,
+        id: 5,
+        description: 'This is user 3 testing',
+    },
+    {
+        name: 'User 6',
+        img: Lion,
+        id: 6,
+        description: 'This is user 3 testing',
+        status: 'online'
     },
 ]
 
