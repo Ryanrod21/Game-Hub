@@ -1,20 +1,29 @@
 import '../App.css';
+import FriendsList from './FriendsList';
 
-function SideHero() {
+function SideHero({ProfileData}) {
   return (
     <div className="SideHero">
-      <h3>
-        <a href="#">Community</a>
-      </h3>
-      <h3>
-        <a href="#">Stats</a>
-      </h3>
-      <h3>
-        <a href="#">Something</a>
-      </h3>
-      <h3>
-        <a href="#">Something</a>
-      </h3>
+      <p>
+        <a href="#">My Dashboard</a>
+      </p>
+      <p>
+        <a href="#">Game's List</a>
+      </p>
+      <p>
+        <a href="#">Purchased</a>
+      </p>
+      <p>
+        <a href="#">Friends</a>
+      </p>
+      <p>
+        <a href="#">Payments</a>
+      </p>
+      <p>
+        <a href="#">Notification</a>
+      </p>
+
+    <FriendsList ProfileData={ProfileData}/>
     </div>
   );
 }

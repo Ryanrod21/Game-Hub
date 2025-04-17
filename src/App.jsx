@@ -10,6 +10,8 @@ import SideHero from './sections/SideHero';
 import CreateList from './sections/CreateList';
 import ItemList from './sections/ItemList';
 
+import ProfileData from './data/ProfileData';
+
 function App() {
   const [list, setList] = useState([]);
 
@@ -42,13 +44,19 @@ function App() {
 
   return (
     <div>
-      <NavBar />
+      <div className='Nav-SideHero'>
+        <SideHero ProfileData={ProfileData}/>
+        
       <div className="MainHero">
-        <SideHero />
+
+        <NavBar />
+        <div className='Inner-MainHero'>
         <ShowMusic />
         <ShowAlarm />
-      </div>
-      <div>
+
+        </div>
+      
+      
         <CreateList onCreate={addList} />
         <ItemList
           onList={list}
@@ -56,6 +64,7 @@ function App() {
           onEditList={onEditList}
         />
       </div>
+        </div>
       <ShowStream />
     </div>
   );
