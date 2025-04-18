@@ -1,5 +1,7 @@
 .allItemList {
   text-align: center;
+  width: 62%;
+  border: 1px solid black;
 }
 
 .allCards {
@@ -8,4 +10,5 @@
   flex-wrap: wrap;
   gap: 12px;
   justify-content: flex-start;
+  align-items: center;
 }

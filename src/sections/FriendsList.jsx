@@ -1,33 +1,39 @@
-import { useState } from "react"
-import FriendsCard from "../components/FriendsCard"
-import '../App.css'
+import { useState } from 'react';
+import FriendsCard from '../components/FriendsCard';
+import '../App.css';
 
-function FriendsList ({ProfileData}) {
-    const [showPopup, setPopup] = useState(false)
-    const [inputValue, setInputValue] = useState("");
+function FriendsList({ ProfileData }) {
+  const [showPopup, setPopup] = useState(false);
+  const [inputValue, setInputValue] = useState('');
 
-    const togglePopup = () => setPopup(!showPopup)
+  const togglePopup = () => setPopup(!showPopup);
 
-    const handleInputChange = (e) => setInputValue(e.target.value)
+  const handleInputChange = (e) => setInputValue(e.target.value);
 
-
-    return  <>
-    
-    <div className="FriendsPanel"><p>Online Players</p>
-        <button className="addBtn" onClick={togglePopup}>+</button>
-        {showPopup && (
-        <div className="popup-box">
-          <input
-            type="text"
-            value={inputValue}
-            onChange={handleInputChange}
-            placeholder="Type something..."
-          />
+  return (
+    <>
+      <div className="FriendsPanel">
+        <div className="OnlinePlus">
+          <p>Friends List</p>
+          <span className="addBtn" onClick={togglePopup}>
+            +
+          </span>
         </div>
-      )}
-    </div>
-        <FriendsCard ProfileData={ProfileData} />
+
+        {showPopup && (
+          <div className="popup-box">
+            <input
+              type="text"
+              value={inputValue}
+              onChange={handleInputChange}
+              placeholder="Add Friend"
+            />
+          </div>
+        )}
+      </div>
+      <FriendsCard ProfileData={ProfileData} />
     </>
+  );
 }
 
-export default FriendsList
+export default FriendsList;
