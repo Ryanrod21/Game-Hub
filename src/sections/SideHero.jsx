@@ -1,7 +1,8 @@
 import '../App.css';
 import FriendsList from './FriendsList';
+import Logout from '../components/Logout';
 
-function SideHero({ProfileData}) {
+function SideHero({ ProfileData }) {
   return (
     <div className="SideHero">
       <p>
@@ -23,7 +24,9 @@ function SideHero({ProfileData}) {
         <a href="#">Notification</a>
       </p>
 
-    <FriendsList ProfileData={ProfileData}/>
+      <FriendsList ProfileData={ProfileData} />
+
+      <Logout />
     </div>
   );
 }

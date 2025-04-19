@@ -58,20 +58,22 @@ function FriendsCard({ ProfileData }) {
       }
     });
 
-  const RenderedRecommendFriends = [...ProfileData].map((profile) => {
-    if (!profile.isFriend) {
-      return (
-        <div className="OfflineCardWrapper" key={profile.id}>
-          <div className="FriendsOfflineCard">
-            <img className="ProfileImgOffline" src={profile.img} />
-            <span className="ProfileHoverOffline">{profile.name} </span>
-            <div className="Profile-popupOffline">{profile.offline}</div>
+  const RenderedRecommendFriends = [...ProfileData]
+    .slice(0, 4)
+    .map((profile) => {
+      if (!profile.isFriend) {
+        return (
+          <div className="OfflineCardWrapper" key={profile.id}>
+            <div className="FriendsOfflineCard">
+              <img className="ProfileImgOffline" src={profile.img} />
+              <span className="ProfileHoverOffline">{profile.name} </span>
+              <div className="Profile-popupOffline">{profile.offline}</div>
+            </div>
           </div>
-        </div>
-      );
-    }
-    // return null; // Ensure the function always returns something (or null if not rendering anything)
-  });
+        );
+      }
+      // return null; // Ensure the function always returns something (or null if not rendering anything)
+    });
   return (
     <div className="FriendsListCard">
       {RenderedFriendsOnline}

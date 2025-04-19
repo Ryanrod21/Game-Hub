@@ -11,6 +11,8 @@ import CreateList from './sections/CreateList';
 import ItemList from './sections/ItemList';
 
 import ProfileData from './data/ProfileData';
+import GameHero from './sections/GameHero';
+import GameData from './data/GameData';
 
 function App() {
   const [list, setList] = useState([]);
@@ -44,27 +46,20 @@ function App() {
 
   return (
     <div>
-      <div className='Nav-SideHero'>
-        <SideHero ProfileData={ProfileData}/>
-        
-      <div className="MainHero">
+      <div className="Nav-SideHero">
+        <SideHero ProfileData={ProfileData} />
 
-        <NavBar />
-        <div className='Inner-MainHero'>
-        <ShowMusic />
-        <ShowAlarm />
-
+        <div className="MainHero">
+          <NavBar />
+          <div className="Inner-MainHero">
+            <ShowMusic />
+            <ShowAlarm />
+          </div>
+          <GameHero GameData={GameData} />
         </div>
-      
-      
-        <CreateList onCreate={addList} />
-        <ItemList
-          onList={list}
-          onRemove={handleRemove}
-          onEditList={onEditList}
-        />
       </div>
-        </div>
+      <CreateList onCreate={addList} />
+      <ItemList onList={list} onRemove={handleRemove} onEditList={onEditList} />
       <ShowStream />
     </div>
   );

@@ -68,7 +68,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  backdrop-filter: blur(10px); /* apply blur */
+  /* backdrop-filter: blur(10px); apply blur */
   -webkit-backdrop-filter: blur(10px); /* for Safari */
   background-color: rgba(
     255,
@@ -234,4 +234,65 @@ body {
 
 .popup-box input {
   width: 120px;
+}
+
+.GameHero {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  flex-wrap: wrap;
+  border: 1px solid red;
+}
+
+.GameHeroCard {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  height: 310px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.GameCardDetail {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  bottom: 11px;
+  left: 10px;
+  width: 50%;
+  align-items: flex-start;
+}
+
+.GameTitleCard {
+  margin: 0;
+  color: white;
+  font-size: 11px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.GameTypeCard {
+  font-size: 11px;
+  margin: 0;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.GameTagContainer {
+  display: flex;
+  width: 100%;
+}
+
+.GameTagCard {
+  margin: 0;
+  background-color: rgba(255, 255, 255, 0.664);
+  width: 100%;
+  border-radius: 23px;
+  font-size: 8px;
+  color: white;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
