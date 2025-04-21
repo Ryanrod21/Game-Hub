@@ -1,6 +1,5 @@
 #root {
-  width: 1440px;
-  margin: 0 auto;
+  width: 100%;
   padding: 2rem;
   text-align: center;
 }
@@ -45,8 +44,15 @@ body {
   color: #888;
 }
 
-.Nav {
+.Nav-SideHero {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
   width: 100%;
+}
+
+.Nav {
+  width: 80%;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -65,30 +71,32 @@ body {
 
 .MainHero {
   border-radius: 10px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  /* backdrop-filter: blur(10px); apply blur */
-  -webkit-backdrop-filter: blur(10px); /* for Safari */
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.2
-  ); /* optional frosted glass effect */
 }
 
-.Nav-SideHero {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
+.MainNews {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.164);
+  width: 1200px;
+  height: 674px;
+}
+
+.MainNews Img {
+  object-fit: contain;
+  max-width: 1200px;
+  border-radius: 10px;
 }
 
 .Inner-MainHero {
   display: flex;
   justify-content: space-between;
-  width: 1080px;
+  width: 100%;
   padding-top: 10px;
+  gap: 30px;
 }
 
 .ProfileImg {
@@ -237,21 +245,29 @@ body {
 }
 
 .GameHero {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  flex-wrap: wrap;
   border: 1px solid red;
+  width: 100%;
+  width: 1080px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.GameHeroContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .GameHeroCard {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  width: 25%;
-  height: 310px;
+  height: 380px;
   border-radius: 10px;
   position: relative;
+  margin: 0 10px;
 }
 
 .GameCardDetail {
@@ -295,4 +311,16 @@ body {
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+@media screen and (max-width: 1200px) {
+  .GameHeroCard {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .GameHeroCard {
+    width: 300px;
+  }
 }

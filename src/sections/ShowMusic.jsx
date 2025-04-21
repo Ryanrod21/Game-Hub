@@ -1,10 +1,10 @@
 import MusicComponent from '../components/MusicComponent';
 import '../sections.css/ShowMusic.css';
 
-function ShowMusic() {
+function ShowMusic({ MusicData }) {
   return (
     <div className="Music-Body">
-      <MusicComponent />
+      <MusicComponent MusicData={MusicData} />
     </div>
   );
 }

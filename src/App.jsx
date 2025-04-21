@@ -9,10 +9,12 @@ import NavBar from './sections/NavBar';
 import SideHero from './sections/SideHero';
 import CreateList from './sections/CreateList';
 import ItemList from './sections/ItemList';
+import GameHero from './sections/GameHero';
+import MainNews from './sections/MainNews';
 
 import ProfileData from './data/ProfileData';
-import GameHero from './sections/GameHero';
 import GameData from './data/GameData';
+import MusicData from './data/MusciData';
 
 function App() {
   const [list, setList] = useState([]);
@@ -52,12 +54,13 @@ function App() {
         <div className="MainHero">
           <NavBar />
           <div className="Inner-MainHero">
-            <ShowMusic />
-            <ShowAlarm />
+            <MainNews />
+            <ShowMusic MusicData={MusicData} />
           </div>
           <GameHero GameData={GameData} />
         </div>
       </div>
+      <ShowAlarm />
       <CreateList onCreate={addList} />
       <ItemList onList={list} onRemove={handleRemove} onEditList={onEditList} />
       <ShowStream />

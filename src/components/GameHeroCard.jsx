@@ -10,10 +10,16 @@ function GameHeroCard({ GameData }) {
     speed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 0,
     pauseonHover: true,
     responsive: [
+      {
+        breakpoint: 1100,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
       {
         breakpoint: 768,
         settings: {
@@ -25,13 +31,23 @@ function GameHeroCard({ GameData }) {
 
   const RenderGame = GameData.map((game) => {
     return (
-      <div key={game.id} className="GameHeroCard" style={game.thebackground}>
-        <div className="GameCardDetail">
-          <h2 className="GameTitleCard">{game.title}</h2>
-          <p className="GameTypeCard">{game.type}</p>
-          <div className="GameTagContainer">
-            <span className="GameTagCard">{game.tag}</span>
-            <span className="GameTagCard">{game.tag2}</span>
+      <div key={game.id}>
+        <div
+          className="GameHeroCard"
+          style={{
+            backgroundImage: `${game.thebackground.backgroundImage}`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
+          <div className="GameCardDetail">
+            <h2 className="GameTitleCard">{game.title}</h2>
+            <p className="GameTypeCard">{game.type}</p>
+            <div className="GameTagContainer">
+              <span className="GameTagCard">{game.tag}</span>
+              <span className="GameTagCard">{game.tag2}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -40,9 +56,7 @@ function GameHeroCard({ GameData }) {
 
   return (
     <div className="GameHero">
-      {/* <Slider {...settings}> */}
-      {RenderGame}
-      {/* </Slider> */}
+      <Slider {...settings}>{RenderGame}</Slider>
     </div>
   );
 }

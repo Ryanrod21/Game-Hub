@@ -10,7 +10,7 @@ const Navbar = () => {
       padding: '16px 32px',
       background: '#333',
       color: '#fff',
-      width: '100%',
+      width: '97%',
       borderRadius: '30px',
     },
     logo: {

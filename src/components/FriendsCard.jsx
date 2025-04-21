@@ -23,17 +23,17 @@ function FriendsCard({ ProfileData }) {
     .map((profile) => {
       if (profile.status === 'online' && profile.isFriend) {
         return (
-          <div className="FriendsCardWrapper">
-            <div className="FriendsCard" key={profile.id}>
+          <div className="FriendsCardWrapper" key={profile.id}>
+            <div className="FriendsCard">
               <img className="ProfileImg" src={profile.img} />
               <span className="ProfileHover">{profile.name} </span>
               <div className="Profile-popup">
                 {profile.description}
 
                 <ul>
-                  {profile.games?.map((game) => {
+                  {profile.games?.map((game, index) => {
                     return (
-                      <li>
+                      <li key={index}>
                         {game.title}: {game.hoursPlayed}
                       </li>
                     );
@@ -46,8 +46,8 @@ function FriendsCard({ ProfileData }) {
         );
       } else if (profile.status !== 'online' && profile.isFriend) {
         return (
-          <div className="OfflineCardWrapper">
-            <div className="FriendsOfflineCard" key={profile.id}>
+          <div className="OfflineCardWrapper" key={profile.id}>
+            <div className="FriendsOfflineCard">
               <img className="ProfileImgOffline" src={profile.img} />
               <span className="ProfileHoverOffline">{profile.name} </span>
               <div className="Profile-popupOffline">{profile.offline}</div>

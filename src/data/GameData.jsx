@@ -14,9 +14,6 @@ const GameData = [
     tag2: 'FPS',
     thebackground: {
       backgroundImage: `url(${apex})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
     },
   },
   {
@@ -27,9 +24,6 @@ const GameData = [
     tag2: 'FPS',
     thebackground: {
       backgroundImage: `url(${halo3})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
     },
   },
   {
@@ -40,9 +34,6 @@ const GameData = [
     tag2: 'FPS',
     thebackground: {
       backgroundImage: `url(${cod2})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
     },
   },
   {
@@ -53,9 +44,6 @@ const GameData = [
     tag2: 'FPS',
     thebackground: {
       backgroundImage: `url(${marvelrivals})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
     },
   },
   {
@@ -66,9 +54,6 @@ const GameData = [
     tag2: 'FPS',
     thebackground: {
       backgroundImage: `url(${gta5})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
     },
   },
   {
@@ -79,9 +64,6 @@ const GameData = [
     tag2: 'FPS',
     thebackground: {
       backgroundImage: `url(${metalgear})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
     },
   },
 ];
