@@ -70,11 +70,46 @@
   animation: scroll-left 12s linear infinite;
 }
 
+
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+
+  .Music-Body{
+    background-color: blue;
+  }
+  .musicBtnContainer{
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+  }
+  .musicBtn{
+    font-size: 1px;
+  }
+  .musicBtn svg{
+    width: 20px;
+    height: 20px;
+  }
+  .scroll-container{
+    font-size: 10px;
+    width: 130px;
+  }
+  .scroll-text{
+    font-size: 10px;
+  }
+  .scroll-list-container{
+    width: 130px;
+  }
+  .musicImg{
+    width: 130px;
+    height: 130px;
   }
 }

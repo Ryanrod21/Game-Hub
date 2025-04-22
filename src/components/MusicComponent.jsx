@@ -14,7 +14,7 @@ function MusicComponent({ MusicData }) {
         </ul>
       </div>
     );
-  });
+  }); 
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentSong, setCurrentSong] = useState(0);
@@ -107,19 +107,19 @@ function MusicComponent({ MusicData }) {
         <p>Progress: {progress}</p>
       </div>
 
-      <div className="flex gap-4 mt-2">
-        <button className="p-2 bg-gray-300 rounded-full" onClick={handlePrev}>
+      <div className="flex gap-4 mt-2 musicBtnContainer">
+        <button className="p-2 bg-gray-300 rounded-full musicBtn" onClick={handlePrev}>
           <SkipBack />
         </button>
 
         <button
           onClick={() => setIsPlaying(!isPlaying)}
-          className="p-2 bg-blue-500 text-white rounded-full"
+          className="p-2 bg-blue-500 text-white rounded-full musicBtn"
         >
           {isPlaying ? <Pause /> : <Play />}
         </button>
 
-        <button className="p-2 bg-gray-300 rounded-full" onClick={handleNext}>
+        <button className="p-2 bg-gray-300 rounded-full musicBtn" onClick={handleNext}>
           <SkipForward />
         </button>
       </div>
