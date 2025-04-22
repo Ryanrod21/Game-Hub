@@ -1,7 +1,9 @@
+import '../App.css';
+
 function Logout() {
   return (
     <>
-      <button>Logout</button>
+      <button className="Logout">Logout</button>
     </>
   );
 }

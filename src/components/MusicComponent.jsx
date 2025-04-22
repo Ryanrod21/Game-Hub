@@ -1,6 +1,7 @@
 import { Play, Pause, SkipBack, SkipForward } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import '../sections.css/ShowMusic.css';
+import noimg from '../assets/noimg.png';
 
 function MusicComponent({ MusicData }) {
   const musicList = MusicData.slice(0, 3).map((music, index) => {
@@ -90,7 +91,10 @@ function MusicComponent({ MusicData }) {
       </div>
 
       <div className="musicImg">
-        <img className="albumImg" src={currentTrack.albumCover} />
+        <img
+          className="albumImg"
+          src={currentTrack.albumCover ? currentTrack.albumCover : noimg}
+        />
       </div>
 
       <audio ref={audioRef} src={currentTrack.duration} preload="metadata" />

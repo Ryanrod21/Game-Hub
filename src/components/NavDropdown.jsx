@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGear } from '@fortawesome/free-solid-svg-icons';
 import '../navbar.css';
 
 export default function Dropdown() {
@@ -19,12 +21,12 @@ export default function Dropdown() {
   return (
     <div className="dropdown">
       <button className="dropdown-toggle" onClick={() => setIsOpen(!isOpen)}>
-        Choose an option
+        <FontAwesomeIcon icon={faGear} size="lg" />
       </button>
 
       {isOpen && (
         <ul className="dropdown-menu">
-          <li
+          {/* <li
             className="theme-red"
             style={menuItemStyle}
             onClick={() => setColor('red')}
@@ -51,7 +53,7 @@ export default function Dropdown() {
             onClick={() => setColor('yellow')}
           >
             Yellow
-          </li>
+          </li> */}
           <li
             className="theme-light"
             style={menuItemStyle}

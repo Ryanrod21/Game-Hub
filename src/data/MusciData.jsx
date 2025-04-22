@@ -31,6 +31,13 @@ const MusicData = [
     artist: 'PARTYNEXTDOOR, Drake',
     duration: '3:15',
   },
+  {
+    song: 'Bank Account',
+    album: `Issa Album`,
+    albumCover: '',
+    artist: '21 Savage',
+    duration: '3:40',
+  },
 ];
 
 export default MusicData;

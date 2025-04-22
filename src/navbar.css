@@ -3,6 +3,13 @@
   display: inline-block;
 }
 
+.nav-link-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-right: 20px;
+}
+
 .dropdown-menu {
   position: absolute;
   color: black;
@@ -15,9 +22,12 @@
   border-radius: 6px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
+  /* grid-template-columns: repeat(2, 1fr); */
   gap: 4px;
+  width: 100px;
+  right: 2px;
 }
 
 .dropdown-menu li {
@@ -34,7 +44,7 @@
 }
 
 .dropdown-toggle {
-  padding: 8px 16px;
+  padding: 3px 4px;
   cursor: pointer;
 }
 

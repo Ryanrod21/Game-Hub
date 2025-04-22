@@ -31,23 +31,23 @@ const Navbar = () => {
   return (
     <nav style={styles.nav}>
       <h2 style={styles.logo}>TheGamerHub</h2>
-      {/* <div style={styles.linkTheme}> */}
-      <ul style={styles.navLinks}>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-        <li>
-          <a href="#">Login</a>
-        </li>
-      </ul>
-      <Dropdown />
-      {/* </div> */}
+      <div className="nav-link-dropdown">
+        <ul style={styles.navLinks}>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+          <li>
+            <a href="#">Login</a>
+          </li>
+        </ul>
+        <Dropdown />
+      </div>
     </nav>
   );
 };
