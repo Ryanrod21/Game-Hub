@@ -92,7 +92,8 @@ body {
 
 .MainNews Img {
   object-fit: contain;
-  max-width: 1200px;
+  width: 1050px;
+  height: 600px;
   border-radius: 10px;
 }
 
@@ -323,13 +324,13 @@ body {
 }
 
 @media screen and (max-width: 1400px) {
-  #root{
+  #root {
     width: 95%;
   }
-  body{
+  body {
     background-color: red;
   }
-  .MainNews{
+  .MainNews {
     width: 75%;
   }
   .GameHeroCard {

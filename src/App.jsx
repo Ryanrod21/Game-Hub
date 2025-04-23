@@ -15,6 +15,7 @@ import MainNews from './sections/MainNews';
 import ProfileData from './data/ProfileData';
 import GameData from './data/GameData';
 import MusicData from './data/MusciData';
+import GameNewsData from './data/GameNewsData';
 
 function App() {
   const [list, setList] = useState([]);
@@ -54,7 +55,7 @@ function App() {
         <div className="MainHero">
           <NavBar />
           <div className="Inner-MainHero">
-            <MainNews />
+            <MainNews GameNewsData={GameNewsData} />
             <ShowMusic MusicData={MusicData} />
           </div>
           <GameHero GameData={GameData} />

@@ -1,10 +1,10 @@
-import spiderman from '../assets/spiderman.jpg';
 import '../App.css';
+import ImageSlider from '../components/ImageSlider';
 
-function MainNews() {
+function MainNews({ GameNewsData }) {
   return (
     <div className="MainNews">
-      <img src={spiderman} />
+      <ImageSlider GameNews={GameNewsData} />
     </div>
   );
 }
