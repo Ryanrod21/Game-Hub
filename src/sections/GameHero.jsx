@@ -5,7 +5,7 @@ import '../App.css';
 function GameHero({ GameData }) {
   return (
     <div className="GameHeroContainer">
-      GameHero
+      <h3>You Might Also Like</h3>
       <GameHeroCard GameData={GameData} />
     </div>
   );

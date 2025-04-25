@@ -8,7 +8,7 @@ function GameHeroCard({ GameData }) {
     dots: false,
     infinite: true,
     speed: 3000,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 0,

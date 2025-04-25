@@ -2,6 +2,7 @@ import { Play, Pause, SkipBack, SkipForward } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import '../sections.css/ShowMusic.css';
 import noimg from '../assets/noimg.png';
+import MusicButton from './MusicButtons';
 
 function MusicComponent({ MusicData }) {
   const musicList = MusicData.slice(0, 3).map((music, index) => {
@@ -81,7 +82,15 @@ function MusicComponent({ MusicData }) {
     setIsPlaying(true);
   };
   return (
-    <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow-lg w-80">
+    <div
+      className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow-lg w-80"
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '7px',
+        alignItems: 'center',
+      }}
+    >
       <div className="scroll-container">
         <div>
           <h1 className="text-xl font-bold scroll-text">
@@ -104,31 +113,17 @@ function MusicComponent({ MusicData }) {
           className="bg-blue-500 h-2 rounded transition-all duration-200"
           style={{ width: `${progress}%` }}
         ></div>
-        <p>Progress: {progress}</p>
-        <p>{currentTrack.duration}</p>
+        {/* <p>Progress: {progress}</p>
+        <p>{currentTrack.duration}</p> */}
       </div>
 
       <div className="flex gap-4 mt-2 musicBtnContainer">
-        <button
-          className="p-2 bg-gray-300 rounded-full musicBtn"
-          onClick={handlePrev}
-        >
-          <SkipBack />
-        </button>
-
-        <button
-          onClick={() => setIsPlaying(!isPlaying)}
-          className="p-2 bg-blue-500 text-white rounded-full musicBtn"
-        >
-          {isPlaying ? <Pause /> : <Play />}
-        </button>
-
-        <button
-          className="p-2 bg-gray-300 rounded-full musicBtn"
-          onClick={handleNext}
-        >
-          <SkipForward />
-        </button>
+        <MusicButton
+          isPlaying={isPlaying}
+          onPlayPause={() => setIsPlaying(!isPlaying)}
+          onPrev={handlePrev}
+          onNext={handleNext}
+        />
       </div>
       <h4 className="musicQueue">Music Queue</h4>
       <div className="songList">{musicList}</div>

@@ -19,18 +19,22 @@ function ImageSlider({ GameNews }) {
   };
 
   return (
-    <div className='MainNews-Button'>
+    <div className="MainNews-Button">
       <img
         src={GameNews[currentImage].img}
         alt={GameNews[currentImage].title}
       />
 
-      <div className='MainNews-SlideBtn'>
-      <p>{GameNews[currentImage].title}</p>
-      <div style={{display: 'flex' }}>
-        <button onClick={goPrevious}><FontAwesomeIcon icon={faArrowLeft} /></button>
-        <button onClick={goNext}><FontAwesomeIcon icon={faArrowRight} /></button>
-      </div>
+      <div className="MainNews-SlideBtn">
+        <p>{GameNews[currentImage].title}</p>
+        <div style={{ display: 'flex', gap: '5px' }}>
+          <button onClick={goPrevious}>
+            <FontAwesomeIcon icon={faArrowLeft} />
+          </button>
+          <button onClick={goNext}>
+            <FontAwesomeIcon icon={faArrowRight} />
+          </button>
+        </div>
       </div>
     </div>
   );

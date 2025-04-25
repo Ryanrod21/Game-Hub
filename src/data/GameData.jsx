@@ -4,6 +4,8 @@ import cod2 from '../assets/cod2.png';
 import metalgear from '../assets/metalgear.jpg';
 import gta5 from '../assets/gta5.png';
 import marvelrivals from '../assets/marvelrivals.jpg';
+import dmc from '../assets/dmc.jpg';
+import kh2 from '../assets/kh2.jpg';
 
 const GameData = [
   {
@@ -64,6 +66,26 @@ const GameData = [
     tag2: 'FPS',
     thebackground: {
       backgroundImage: `url(${metalgear})`,
+    },
+  },
+  {
+    id: 7,
+    title: 'Devil May Cry 5',
+    type: 'Story Driven',
+    tag: 'Single Player',
+    tag2: 'Fighting',
+    thebackground: {
+      backgroundImage: `url(${dmc})`,
+    },
+  },
+  {
+    id: 8,
+    title: 'Kingdom Hearts 2',
+    type: 'Story Driven',
+    tag: 'Single Player',
+    tag2: 'Disney',
+    thebackground: {
+      backgroundImage: `url(${kh2})`,
     },
   },
 ];

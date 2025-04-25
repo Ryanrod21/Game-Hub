@@ -1,16 +1,17 @@
 .Music-Body {
-  border: 1px solid lime;
+  border: 1px solid black;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.164);
-  width: 20%;
-  height: 590px;
+  width: 35%;
+  height: 574px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  padding-top: 7px;
 }
 .musicImg {
-  border: 1px solid blue;
+  border: 1px solid black;
   width: 250px;
   height: 250px;
 }
@@ -49,9 +50,19 @@
   margin: 0;
   color: black;
 }
+.musicBtn {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+}
+
+.musicBtn button {
+  padding: 5px 10px;
+}
 
 .scroll-list-container {
-  width: 250px;
+  width: 410px;
+  height: 40px;
   font-size: 10px;
   overflow: hidden;
   white-space: nowrap;
@@ -70,7 +81,6 @@
   animation: scroll-left 12s linear infinite;
 }
 
-
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
@@ -80,35 +90,33 @@
   }
 }
 
-
 @media screen and (max-width: 1400px) {
-
-  .Music-Body{
+  .Music-Body {
     background-color: blue;
   }
-  .musicBtnContainer{
+  .musicBtnContainer {
     display: flex;
     justify-content: center;
     gap: 7px;
   }
-  .musicBtn{
+  .musicBtn {
     font-size: 1px;
   }
-  .musicBtn svg{
+  .musicBtn svg {
     width: 20px;
     height: 20px;
   }
-  .scroll-container{
+  .scroll-container {
     font-size: 10px;
     width: 130px;
   }
-  .scroll-text{
+  .scroll-text {
     font-size: 10px;
   }
-  .scroll-list-container{
+  .scroll-list-container {
     width: 130px;
   }
-  .musicImg{
+  .musicImg {
     width: 130px;
     height: 130px;
   }

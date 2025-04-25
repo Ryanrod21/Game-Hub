@@ -1,6 +1,6 @@
 import spiderman from '../assets/spiderman.jpg';
-import batman from '../assets/batman.jpg';
 import gow from '../assets/gow.jpg';
+import mario from '../assets/mario.jpg';
 
 const GameNewsData = [
   {
@@ -8,8 +8,8 @@ const GameNewsData = [
     img: spiderman,
   },
   {
-    title: 'Batman Arkham Knight',
-    img: batman,
+    title: 'Mario Kart World',
+    img: mario,
   },
   {
     title: 'God of War',
