@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import '../navbar.css';
 
 function ImageSlider({ GameNews }) {
   const [currentImage, setCurrentImage] = useState(0);
@@ -16,16 +19,18 @@ function ImageSlider({ GameNews }) {
   };
 
   return (
-    <div>
+    <div className='MainNews-Button'>
       <img
         src={GameNews[currentImage].img}
         alt={GameNews[currentImage].title}
       />
-      <p>{GameNews[currentImage].title}</p>
 
-      <div>
-        <button onClick={goPrevious}>Pre</button>
-        <button onClick={goNext}>Next</button>
+      <div className='MainNews-SlideBtn'>
+      <p>{GameNews[currentImage].title}</p>
+      <div style={{display: 'flex' }}>
+        <button onClick={goPrevious}><FontAwesomeIcon icon={faArrowLeft} /></button>
+        <button onClick={goNext}><FontAwesomeIcon icon={faArrowRight} /></button>
+      </div>
       </div>
     </div>
   );
