@@ -2,6 +2,7 @@
   width: 100%;
   padding: 2rem;
   text-align: center;
+  margin: 0;
 }
 
 body {
@@ -62,7 +63,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 8px;
-  width: 8%;
+  width: 11%;
   text-align: start;
   background-color: #08d4f8a8;
   border-radius: 10px;
@@ -84,14 +85,10 @@ body {
 
 .MainNews {
   border-radius: 10px;
-  width: 61%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.MainNews-Button {
-  position: relative;
 }
 
 .MainNews button {
@@ -104,25 +101,50 @@ body {
   width: 40px;
 }
 
-.MainNews Img {
+.MainNews-Button {
+  width: 100%;
+}
+
+.MainNews img {
   object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  position: relative;
 }
 
 .MainNews-SlideBtn {
   position: absolute;
-  top: 82%;
-  left: 5%;
+  top: 360px;
+  left: 340px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
+  text-align: center;
+  border: 1px solid white;
+  /* text don't stay at same spot  */
+}
+
+.MainNews-SlideBtn > * {
+  margin-bottom: 1rem;
+}
+
+.MainNews-SlideBtn h2 {
+  color: white;
+  margin: 0;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .MainNews-SlideBtn p {
   color: white;
   margin: 0;
+  max-width: 300px;
+  font-size: 12px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .MainNews-SlideBtn button {
@@ -130,10 +152,11 @@ body {
 }
 
 .Inner-MainHero {
+  /* border: 1px solid white; */
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
-  height: 611px;
+  height: 468px;
   padding-top: 10px;
   gap: 30px;
 }
@@ -285,8 +308,8 @@ body {
 
 .GameHero {
   border: 1px solid red;
-  width: 100%;
-  width: 1080px;
+  width: 1640px;
+  height: 515px;
   overflow: hidden;
   border-radius: 10px;
 }
@@ -309,7 +332,7 @@ body {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  height: 380px;
+  height: 500px;
   border-radius: 10px;
   position: relative;
   margin: 0 10px;
@@ -356,6 +379,33 @@ body {
   color: white;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
+}
+
+.logo-search-bar {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.search-bar input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.search-bar button {
+  padding: 8px 12px;
+  background-color: #ffffff2c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .Logout {

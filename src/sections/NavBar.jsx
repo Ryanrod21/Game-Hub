@@ -1,5 +1,6 @@
 import '../navbar.css';
 import Dropdown from '../components/NavDropdown';
+import SearchBar from '../components/SearchBar';
 
 const Navbar = () => {
   const styles = {
@@ -30,7 +31,10 @@ const Navbar = () => {
 
   return (
     <nav style={styles.nav}>
-      <h2 style={styles.logo}>TheGamerHub</h2>
+      <div className="logo-search-bar">
+        <h2 style={styles.logo}>TheGamerHub</h2>
+        <SearchBar />
+      </div>
       <div className="nav-link-dropdown">
         <ul style={styles.navLinks}>
           <li>

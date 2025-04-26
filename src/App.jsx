@@ -61,10 +61,10 @@ function App() {
           <GameHero GameData={GameData} />
         </div>
       </div>
-      <ShowAlarm />
+      {/* <ShowAlarm />
       <CreateList onCreate={addList} />
       <ItemList onList={list} onRemove={handleRemove} onEditList={onEditList} />
-      <ShowStream />
+      <ShowStream /> */}
     </div>
   );
 }

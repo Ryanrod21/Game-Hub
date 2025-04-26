@@ -87,7 +87,6 @@ function MusicComponent({ MusicData }) {
       style={{
         display: 'flex',
         flexDirection: 'column',
-        gap: '7px',
         alignItems: 'center',
       }}
     >
