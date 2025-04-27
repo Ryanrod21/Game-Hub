@@ -7,48 +7,12 @@
 
 body {
   transition: background-color 0.5s ease;
-  background-color: rgb(226, 48, 107);
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  /* background-color: rgb(226, 48, 107); */
 }
 
 .Nav-SideHero {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   align-items: flex-start;
   width: 100%;
 }
@@ -65,10 +29,12 @@ body {
   padding: 8px;
   width: 11%;
   text-align: start;
-  background-color: #08d4f8a8;
+  background: rgb(51, 51, 51);
   border-radius: 10px;
   border: 1px solid black;
   position: sticky;
+  box-shadow: 0 0 20px black;
+  z-index: 9;
 }
 
 .SideHero a {
@@ -85,10 +51,10 @@ body {
 
 .MainNews {
   border-radius: 10px;
-  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 0 20px black;
 }
 
 .MainNews button {
@@ -103,6 +69,7 @@ body {
 
 .MainNews-Button {
   width: 100%;
+  position: relative;
 }
 
 .MainNews img {
@@ -110,25 +77,23 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  position: relative;
+  max-width: 1281px;
 }
 
 .MainNews-SlideBtn {
   position: absolute;
-  top: 360px;
-  left: 340px;
+  top: 50%;
+  right: 3%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 5px;
   text-align: center;
-  border: 1px solid white;
+  background-color: #32323294;
+  padding: 20px;
+  border-radius: 10px;
   /* text don't stay at same spot  */
-}
-
-.MainNews-SlideBtn > * {
-  margin-bottom: 1rem;
 }
 
 .MainNews-SlideBtn h2 {
@@ -142,6 +107,7 @@ body {
   color: white;
   margin: 0;
   max-width: 300px;
+  height: 110px;
   font-size: 12px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
     1px 1px 0 #000;
@@ -152,12 +118,11 @@ body {
 }
 
 .Inner-MainHero {
-  /* border: 1px solid white; */
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
-  height: 468px;
-  padding-top: 10px;
+  height: 50%;
+  padding-top: 15px;
   gap: 30px;
 }
 
@@ -180,6 +145,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  color: white;
 }
 
 .FriendsListCard p {
@@ -240,6 +206,7 @@ body {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
   transform: translateX(0);
+  border-radius: 10px;
 }
 
 .Profile-popupOffline {
@@ -258,6 +225,7 @@ body {
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
   transform: translateX(0);
+  border-radius: 10px;
 }
 
 .Profile-popup li {
@@ -290,6 +258,7 @@ body {
   gap: 4px;
   font-size: 18px;
   font-weight: bold;
+  color: white;
 }
 
 .popup-box {
@@ -307,7 +276,6 @@ body {
 }
 
 .GameHero {
-  border: 1px solid red;
   width: 1640px;
   height: 515px;
   overflow: hidden;
@@ -320,6 +288,7 @@ body {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  height: 50%;
 }
 
 .GameHeroContainer h3 {
@@ -329,10 +298,10 @@ body {
 }
 
 .GameHeroCard {
-  border: 1px solid black;
+  box-shadow: 0 0 11px black;
   display: flex;
   flex-direction: column;
-  height: 500px;
+  height: 450px;
   border-radius: 10px;
   position: relative;
   margin: 0 10px;

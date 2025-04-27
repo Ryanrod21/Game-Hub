@@ -90,19 +90,18 @@ function MusicComponent({ MusicData }) {
         alignItems: 'center',
       }}
     >
+      <div className="musicImg">
+        <img
+          className="albumImg"
+          src={currentTrack.albumCover ? currentTrack.albumCover : noimg}
+        />
+      </div>
       <div className="scroll-container">
         <div>
           <h1 className="text-xl font-bold scroll-text">
             {currentTrack.song} - {currentTrack.album}
           </h1>
         </div>
-      </div>
-
-      <div className="musicImg">
-        <img
-          className="albumImg"
-          src={currentTrack.albumCover ? currentTrack.albumCover : noimg}
-        />
       </div>
 
       <audio ref={audioRef} src={currentTrack.duration} preload="metadata" />

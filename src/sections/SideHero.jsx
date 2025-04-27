@@ -12,13 +12,7 @@ function SideHero({ ProfileData }) {
         <a href="#">Game's List</a>
       </p>
       <p>
-        <a href="#">Purchased</a>
-      </p>
-      <p>
         <a href="#">Friends</a>
-      </p>
-      <p>
-        <a href="#">Payments</a>
       </p>
       <p>
         <a href="#">Notification</a>
